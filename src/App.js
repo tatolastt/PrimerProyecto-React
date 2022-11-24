@@ -1,11 +1,18 @@
-import logo from './logo.svg';
+
 import './App.css';
+
+//creacion componente 
+
+function HelloComponent(props){
+  return(
+    <h1>Hola {props.name} estudiante de {props.carrera}</h1>
+  );
+}
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -15,7 +22,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          <HelloComponent name="tato" carrera="react"/>
         </a>
       </header>
     </div>
