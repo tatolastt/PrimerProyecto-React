@@ -1,30 +1,28 @@
+import './css/navBar.css';
+import NavBar from './componentes/NavBar';
 
-import './App.css';
+import Header from './componentes/Header';
 
 //creacion componente 
 
-function HelloComponent(props){
-  return(
-    <h1>Hola {props.name} estudiante de {props.carrera}</h1>
-  );
-}
+// function HelloComponent(props){
+//   return(
+//     <h1>Hola {props.name} estudiante de {props.carrera}</h1>
+//   );
+// }
+
+// //en vez de pedir un props se pide directamente con { } lo que uno quiere pedir
+// function ComponenteConDeepMatching({saludo, despedida}){
+//   return(
+//     <h2>{saludo} y {despedida}</h2>
+//   );
+// }
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <HelloComponent name="tato" carrera="react"/>
-        </a>
-      </header>
+    <div>
+      <NavBar/>
+      <Header/>
     </div>
   );
 }
