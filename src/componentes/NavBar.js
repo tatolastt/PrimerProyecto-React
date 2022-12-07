@@ -13,11 +13,8 @@ function NavBar() {
                     <li><a href="#">Contacto</a></li>
                     <CardWidget/>
                 </ul>
-
             </div>
-            
         </nav>
-        
     </header>
   )
 }

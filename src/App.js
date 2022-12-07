@@ -23,7 +23,7 @@ function App() {
     <div>
       <NavBar/>
       <Header/>
-      <ItemListContainer/>
+      <ItemListContainer saludo="Estos son tus productos"/>
     </div>
   );
 }
