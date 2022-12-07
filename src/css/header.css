@@ -1,4 +1,4 @@
-.header{
+.headerMio{
     background: rgba(0,0,0,0.8) url(../imagenes/fondoCelus.webp);
     background-blend-mode: darken;
     width: 100%;
@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 
 .tituloTienda{

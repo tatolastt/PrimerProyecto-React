@@ -1,7 +1,7 @@
 import './css/navBar.css';
 import NavBar from './componentes/NavBar';
-
 import Header from './componentes/Header';
+import ItemListContainer from './componentes/ItemListContainer';
 
 //creacion componente 
 
@@ -23,6 +23,7 @@ function App() {
     <div>
       <NavBar/>
       <Header/>
+      <ItemListContainer/>
     </div>
   );
 }

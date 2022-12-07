@@ -1,6 +1,6 @@
 
 /* nav cs */
-.nav{
+.navMio{
     background-color: #121212;
     padding: 15px;
     margin: 0px auto;
@@ -12,7 +12,7 @@
     
 }
 
-.nav ul{
+.navMio ul{
     list-style-type: none;
     display: flex;
     justify-content: space-between;
@@ -21,11 +21,11 @@
     margin: 0 auto;
 }
 
-.nav ul li{
+.navMio ul li{
     padding: 0px 10px;
 }
 
-.nav ul li a{
+.navMio ul li a{
     text-decoration: none;
     color: #fff;
     font-size: 15px;
@@ -34,7 +34,7 @@
     
 }
 
-.nav ul li a:hover{
+.navMio ul li a:hover{
     color: #f00;
 }
 

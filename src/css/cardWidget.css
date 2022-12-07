@@ -1,0 +1,28 @@
+
+.carrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+
+}
+
+.carrito:hover{
+   transform: scale(1.4);
+}
+.carritoLogo{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.carritoTexto{
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 16px; 
+}
