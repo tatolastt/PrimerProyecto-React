@@ -1,13 +1,13 @@
 import carrito from "../imagenes/carrito.png"
-import "../css/cardWidget.css"
+import "../css/cartWidget.css"
 
-function CardWidget() {
+function CartWidget() {
   return (
-    <a href="#" className="carrito">
+    <div className="carrito">
         <img src={carrito}  className="carritoLogo" alt="carrito" />
         <p className="carritoTexto">2</p>
-    </a>
+    </div>
   )
 }
 
-export default CardWidget
+export default CartWidget;
