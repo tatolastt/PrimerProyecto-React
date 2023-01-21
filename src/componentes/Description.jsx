@@ -5,9 +5,9 @@ import { useParams } from "react-router-dom";
 
 function Description( {data}) {
 
-    let {nombre} = useParams();
+  let {nombre} = useParams();
 
-    const item = data.find((item) => item.nombre === nombre)
+  const item = data.find((item) => item.nombre === nombre)
 
 
   return (

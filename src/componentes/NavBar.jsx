@@ -1,4 +1,4 @@
-
+import React from "react";
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
 
@@ -10,9 +10,6 @@ function NavBar() {
                 <ul>
                     <Link to="/" className="linkss"> 
                     <li><h3>inicio</h3></li>
-                    </Link>
-                    <Link to="/nosotros" className="linkss"> 
-                    <li><h3>Nosotros</h3></li>
                     </Link>
                     <Link to="/nuestrosProductos" className="linkss">
                     <li><h3>Nuestros Productos</h3></li>
@@ -32,4 +29,4 @@ function NavBar() {
 
 
 
-export default NavBar;
+export default React.memo(NavBar);
