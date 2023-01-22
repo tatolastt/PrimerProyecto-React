@@ -3,7 +3,7 @@ import "../css/card.css"
 import React from "react";
 
 
-function Card({imagen, producto, precio}) {
+function ItemList({imagen, producto, precio}) {
   const path = useLocation().pathname;
    
   return (
@@ -22,4 +22,4 @@ function Card({imagen, producto, precio}) {
   )
 }
 
-export default Card;
+export default ItemList;

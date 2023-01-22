@@ -46,13 +46,13 @@ function Form(carrito) {
       
       const clientesColecctionRef = collection(db, "Ventas");
 
-      addDoc(clientesColecctionRef, Comprador).then((id) => console.log("el id de la compra es") + id)
+      addDoc(clientesColecctionRef, Comprador)
       
 
 
 
 
-      swal("Compra realizada con exito", "Gracias por su compra", "success")
+      swal("Compra realizada con exito", "Gracias por su compra ", "success")
       console.log(nombre, apellido, telefono, direccion);
       console.log("Formulario Enviado");
       console.log(Comprador)

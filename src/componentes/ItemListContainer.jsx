@@ -1,4 +1,4 @@
-import Card from "./Card"
+import ItemList from "./ItemList"
 import "../css/itemListContainer.css"
 
 
@@ -10,7 +10,7 @@ function ItemListContainer({saludo, data}) {
       <div className="itemMio">
         {data.map((celular) => {
           return (
-            <Card imagen={celular.imagen} producto={celular.nombre} precio={"$" + celular.precio}  key={celular.nombre}/>
+            <ItemList imagen={celular.imagen} producto={celular.nombre} precio={"$" + celular.precio}  key={celular.nombre}/>
           )
         })}
       </div>

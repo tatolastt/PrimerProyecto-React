@@ -27,8 +27,6 @@ function ItemDetail( {data}) {
     toast('Agregado Al Carrito', {
     icon: '👏',
     });
-
-
   }
 
   return (
@@ -36,7 +34,7 @@ function ItemDetail( {data}) {
        <div className="cardProducto">
         <img src={item.imagen} alt="imagen celular"></img>
         <h2>{item.nombre}</h2>
-        <p>{item.precio}</p>
+        <p>${item.precio}</p>
         {
           buy ? <p className='agregadoCarrito'>Agregado Al carrito</p> : <button onClick={handleOnAdd} >Comprar</button>
         }
