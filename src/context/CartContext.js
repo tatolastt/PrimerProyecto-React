@@ -25,6 +25,7 @@ export const CartContextProvider = ({ children }) => {
     }
 
     const AddItem = (item) => {
+
         
         //guardar en el local storage
         let cartLS = getLocalStorage();
@@ -38,11 +39,7 @@ export const CartContextProvider = ({ children }) => {
         setCart([]);
         localStorage.removeItem("cart");
     }
-
-    const RemoveItem = (nombre) => {
-        const itemFiltrados = cart.filter((item) => item.nombre !== nombre);
-        setCart(itemFiltrados);
-    }
+    
 
     //funcion que me devuelva cuantos productos hay en el carrito
     const QuantityFunction = () => {
