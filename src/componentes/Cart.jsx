@@ -1,15 +1,29 @@
 import React from 'react'
-import { useEffect } from 'react';
-import { useState, useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import CartContext from '../context/CartContext';
 import "../css/cart.css"
+import Form from './Form';
+
 
 function Cart() {
-    const {cart,RemoveCart} = useContext(CartContext)
+    const {cart,RemoveCart,getLocalStorage,setCart} = useContext(CartContext)
+    const [continuar, SetContinuar] = useState(false);
+    
 
     const handleVaciar = () => {
         RemoveCart()
+        SetContinuar(false)
     }
+
+    const HandleContinue = () => {
+        SetContinuar(true)
+    }
+
+
+    useEffect(() => {
+        const cart = getLocalStorage()
+        setCart(cart);
+    }, [])
 
     
 
@@ -25,18 +39,20 @@ function Cart() {
     return (
         <div className="cartContenedor">
         <h1>Cart</h1>
-            {cart.map((item) => {
+            {cart.map((item,i) => {
             return (
-                <div className='cuadroProductos'>
+                <div className='cuadroProductos' key={i}>
                     <p>{item.nombre}</p>
                     <p>${item.precio}</p>
                 </div>
             )
             
         })}
-        <button className='botonVaciar' onClick={handleVaciar}>Vaciar Carrito</button>
-
-
+        <div className='botones'>
+            <button className='botonVaciar' onClick={handleVaciar}>Vaciar Carrito</button>
+            <button className='botonContinuar' onClick={HandleContinue}>continuar compra</button>
+        </div>
+        {continuar && <Form/>}
     </div>
 )
 }

@@ -7,7 +7,8 @@ import {Routes, Route} from 'react-router-dom';
 import ItemDetail from './componentes/ItemDetail';
 import Cart from './componentes/Cart';
 // 
-import React , {useState, useEffect } from "react"
+import {useState, useEffect} from "react"
+import { useContext } from 'react';
 import Contacto from './componentes/Contacto';
 
 import { db } from './db/firebase-config';
@@ -16,7 +17,11 @@ import { collection, getDocs } from 'firebase/firestore';
 import { CartContextProvider } from './context/CartContext';
 
 
+
+
 function App() {
+
+  
 
 
   const productosCollectionRef = collection(db, "productos");
@@ -35,6 +40,7 @@ function App() {
 
   useEffect(() => {
     getProducts();
+
 
     // localStorage.getItem
   },[]);

@@ -42,4 +42,23 @@
     cursor: pointer;
 }
 
+.botones{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.botonContinuar{
+    background-color: rgb(6, 6, 6);
+    color:aliceblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 2rem;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
 

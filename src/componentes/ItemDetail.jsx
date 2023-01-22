@@ -1,12 +1,15 @@
-import '../css/description.css';
+import '../css/itemDetail.css';
 import { useParams } from "react-router-dom";
 
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 import CartContext from '../context/CartContext';
+import toast , { Toaster } from 'react-hot-toast';
 
 
 function ItemDetail( {data}) {
+
+  const [buy, setBuy] = useState(false)
 
   let {nombre} = useParams();
 
@@ -19,6 +22,13 @@ function ItemDetail( {data}) {
   const handleOnAdd = () => {
     AddItem(item)
 
+    setBuy(true)
+
+    toast('Agregado Al Carrito', {
+    icon: '👏',
+    });
+
+
   }
 
   return (
@@ -27,8 +37,14 @@ function ItemDetail( {data}) {
         <img src={item.imagen} alt="imagen celular"></img>
         <h2>{item.nombre}</h2>
         <p>{item.precio}</p>
-        <button onClick={handleOnAdd} >Comprar</button>
+        {
+          buy ? <p className='agregadoCarrito'>Agregado Al carrito</p> : <button onClick={handleOnAdd} >Comprar</button>
+        }
        </div>
+       <Toaster
+          position="top-left"
+          reverseOrder={false}
+        />  
     </>
   )
 }

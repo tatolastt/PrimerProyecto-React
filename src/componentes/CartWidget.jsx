@@ -7,13 +7,14 @@ import CartContext from '../context/CartContext';
 
 function CartWidget() {
 
-  const {cart} = React.useContext(CartContext)
+  const {QuantityFunction} = React.useContext(CartContext)
 
 
   return (
     <div className="carrito">
         <img src={carrito}  className="carritoLogo" alt="carrito" />
-        <p className="carritoTexto">0</p>
+        
+        {(QuantityFunction() > 0) && (<div className="carritoCantidad">{QuantityFunction()}</div>)}
     </div>
   )
 }

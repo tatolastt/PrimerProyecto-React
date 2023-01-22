@@ -26,3 +26,11 @@
     text-transform: uppercase;
     margin-top: 16px; 
 }
+
+.carritoCantidad{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
