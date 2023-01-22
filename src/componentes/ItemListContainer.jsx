@@ -10,7 +10,7 @@ function ItemListContainer({saludo, data}) {
       <div className="itemMio">
         {data.map((celular) => {
           return (
-            <Card imagen={celular.imagen} producto={celular.nombre} precio={celular.precio}  key={celular.nombre}/>
+            <Card imagen={celular.imagen} producto={celular.nombre} precio={"$" + celular.precio}  key={celular.nombre}/>
           )
         })}
       </div>

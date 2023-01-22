@@ -1,8 +1,11 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useContext } from "react-router-dom";
 import "../css/card.css"
+import React from "react";
+
 
 function Card({imagen, producto, precio}) {
   const path = useLocation().pathname;
+   
   return (
     <div>
         <div className="card  text-center cardMio">

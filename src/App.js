@@ -4,19 +4,20 @@ import NavBar from './componentes/NavBar';
 import Header from './componentes/Header';
 import ItemListContainer from './componentes/ItemListContainer';
 import {Routes, Route} from 'react-router-dom';
-import Description from './componentes/Description';
+import ItemDetail from './componentes/ItemDetail';
+import Cart from './componentes/Cart';
 // 
-import imagenIphone from "./imagenes/iphone13.jpg"
-import s22 from "./imagenes/s22.webp"
-import edge30 from "./imagenes/moto30pro.png"
-import {useState, useEffect } from "react"
+import React , {useState, useEffect } from "react"
 import Contacto from './componentes/Contacto';
 
 import { db } from './db/firebase-config';
 import { collection, getDocs } from 'firebase/firestore';
 
+import { CartContextProvider } from './context/CartContext';
+
 
 function App() {
+
 
   const productosCollectionRef = collection(db, "productos");
 
@@ -34,6 +35,8 @@ function App() {
 
   useEffect(() => {
     getProducts();
+
+    // localStorage.getItem
   },[]);
 
   //CARGANDO
@@ -56,13 +59,16 @@ function App() {
 
   return (
     <div>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={ <div> <Header/> </div>}/>
-        <Route path="/nuestrosProductos" element={<ItemListContainer saludo="Estos son tus productos" data={listCelular}/>}/>
-        <Route path="/nuestrosProductos/:nombre" element={<Description data={listCelular}/>}/>
-        <Route path='/contacto' element={<Contacto/>}/>
-      </Routes>
+      <CartContextProvider>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={ <div> <Header/> </div>}/>
+          <Route path="/nuestrosProductos" element={<ItemListContainer saludo="Estos son tus productos" data={listCelular}/>}/>
+          <Route path="/nuestrosProductos/:nombre" element={<ItemDetail data={listCelular}/>}/>
+          <Route path='/contacto' element={<Contacto/>}/>
+          <Route path='/carrito' element={<Cart/>}/>
+        </Routes>
+      </CartContextProvider>
     </div>
   );
 }
